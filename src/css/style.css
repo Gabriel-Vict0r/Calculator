@@ -120,6 +120,11 @@ body {
 }
 
 @media only screen and (max-width: 912px) {
+    .principal { 
+        background-size: 550px;
+        background-position-y: 45%;
+        background-position-x: 45%;
+    }
     .principal .container-calculator { 
         width: 50%;
         max-width: 60%;
@@ -177,16 +182,6 @@ body {
     }
     .operandos {
         column-gap: .5em;
-        row-gap: .7em;
-    }
-}
-@media only screen and (width: 390px) {
-    .container-calculator {
-        width: 93vw;
-        max-width: 95vw;
-        height: 65vh;
-    }
-    .operandos {
         row-gap: .7em;
     }
 }
