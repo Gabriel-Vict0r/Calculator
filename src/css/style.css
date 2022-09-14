@@ -49,20 +49,13 @@ body {
     justify-content: baseline;
     text-align: right;
 }
-.operandos {
-    border-top: #74EBD5 solid 2px;
-    padding-top: 20px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    max-width: 100%;
-    row-gap: .5em;
-}
-.container-calculator {
-    width: 80vw;
-    max-width: 512px;
+
+.principal .container-calculator {
+    width: 30%;
+    max-width: 50%;
     background-color: var(--color-background-calculator);
-    height: 90vh;
+    height: 80%;
+    max-height: 550px;
     padding-top: 30px;
     padding-right: 30px;
     padding-left: 30px;
@@ -71,7 +64,16 @@ body {
     border-radius: 5px;
     box-shadow: -5px 5px 8px rgba(0, 0, 0, 0.3);
 }
-.buttons {
+.container-calculator .operandos {
+    border-top: #74EBD5 solid 2px;
+    padding-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    max-width: 100%;
+    row-gap: .5em;
+}
+.operandos .buttons {
     background-color: unset;
     border: none;
     color: var(--color-background-calculator);
@@ -96,7 +98,7 @@ body {
     border: 1px black solid;
     border-radius: 30px;
 }
-.unusual {
+.operandos .unusual {
     background-image: url(../images/Ellipse-bg_especial.svg);
 
 }
@@ -118,46 +120,40 @@ body {
 }
 
 @media only screen and (max-width: 912px) {
-    .container-calculator { 
-        width: 90vw;
-        max-width: 80vw;
-        height: 60vh;
-    }
-    .buttons { 
-        width: 80px;
-        height: 80px;
+    .principal .container-calculator { 
+        width: 50%;
+        max-width: 60%;
+        height: 80%;
     }
     .operandos { 
         padding-top: 40px;
         row-gap: 1em;
     }
 }
-@media only screen and (max-width: 768px) {
-    .container-calculator { 
-        height: 70vh;
+
+@media only screen and (width: 717px) { 
+    .principal .container-calculator { 
+        width: 60%;
+        max-width: 90%;
+        height: 90%;
+    }
+    .operandos .buttons { 
+        width: 45px;
+    height: 45px;
     }
 }
-@media only screen and (max-width: 717px) { 
-    .container-calculator { 
-        height: 90vh;
-    }
-    .buttons {
-        width: 40px;
-        height: 40px;
-    }
-    .operandos {
-        padding-top: 30px;
-        column-gap: 0;
-        row-gap: .8em;
+@media only screen and (max-width: 575px) {
+    .principal .container-calculator { 
+        width: 70%;
+        max-width: 70%;
+        height: 80%;
     }
 }
-@media only screen and (max-width: 540px) {
-    .container-calculator { 
-        height: 80vh;
-    }
-    .buttons {
-        width: 50px;
-        height: 50px;
+@media only screen and (width: 1024px) {
+    .principal .container-calculator { 
+        width: 50%;
+        max-width: 70%;
+        height: 90%;
     }
 }
 
@@ -167,18 +163,10 @@ body {
         background-position-y: 50%;
         background-position-x: 10%;
     }
-    .container-calculator {
-        width: 90vw;
-        height: 60vh;
-    }
-    .buttons {
-        width: 50px;
-        height: 50px;
-    }
-    .operandos {
-        padding-top: 40px;
-        column-gap: .9em;
-        row-gap: .7em;
+    .principal .container-calculator {
+        width: 90%;
+        max-width: 90%;
+        height: 80%;
     }
 }
 
@@ -209,12 +197,12 @@ body {
         background-position-y: 50%;
         background-position-x: 5%;
     }
-    .container-calculator { 
-        width: 90vw;
-        height: 70vh;
-        
+    .principal .container-calculator { 
+        width: 90%;
+    max-width: 80%;
+        height: 60%;
     }
-    .buttons {
+    .operandos .buttons {
         width: 30px;
         height: 30px;
         font-size: 1rem;
