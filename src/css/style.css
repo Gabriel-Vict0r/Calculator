@@ -1,0 +1,226 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'roboto', sans-serif;
+    font-size: 1.1em;
+}
+:root {
+    --color-background-calculator: #323232;
+    --color-standard-white: #F8F8F8;
+    --color-secondary: #74EBD5;
+}
+body {
+    background-color: var(--color-standard-white);
+}
+
+.principal {
+    background-image: url(../images/bg-illustration.png);
+    background-size: 400px;
+    background-position-y: 10%;
+    background-position-x: 25%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.results {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-bottom: 4px;
+    height: 90px;
+    text-align: right;
+    color: var(--color-standard-white);
+    font-size: 1.7rem;
+}
+.results span { 
+    cursor: default;
+}
+.resultado {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.results p {
+    justify-content: baseline;
+    text-align: right;
+}
+.operandos {
+    border-top: #74EBD5 solid 2px;
+    padding-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    max-width: 100%;
+    row-gap: .5em;
+}
+.container-calculator {
+    width: 80vw;
+    max-width: 512px;
+    background-color: var(--color-background-calculator);
+    height: 90vh;
+    padding-top: 30px;
+    padding-right: 30px;
+    padding-left: 30px;
+    /* padding: 40px; */
+    margin: 0 auto;
+    border-radius: 5px;
+    box-shadow: -5px 5px 8px rgba(0, 0, 0, 0.3);
+}
+.buttons {
+    background-color: unset;
+    border: none;
+    color: var(--color-background-calculator);
+    background-image: url(../images/elipse-bg.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    /* color: var(--color-background-calculator); */
+    text-align: center;
+    margin: 0 auto;
+    width: 55px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.buttons:hover {
+    opacity: .9;
+}
+.buttons:active { 
+    border: 1px black solid;
+    border-radius: 30px;
+}
+.unusual {
+    background-image: url(../images/Ellipse-bg_especial.svg);
+
+}
+/* .buttonCalc { 
+    height: 100px;
+} */
+@media only screen and (width: 1280px) {
+    .container-calculator { 
+        height: 80vh;
+    }
+    .buttons { 
+        width: 70px;
+        height: 70px;
+    }
+    .operandos { 
+        padding-top: 40px;
+        row-gap: .9em;
+    }
+}
+
+@media only screen and (max-width: 912px) {
+    .container-calculator { 
+        width: 90vw;
+        max-width: 80vw;
+        height: 60vh;
+    }
+    .buttons { 
+        width: 80px;
+        height: 80px;
+    }
+    .operandos { 
+        padding-top: 40px;
+        row-gap: 1em;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .container-calculator { 
+        height: 70vh;
+    }
+}
+@media only screen and (max-width: 717px) { 
+    .container-calculator { 
+        height: 90vh;
+    }
+    .buttons {
+        width: 40px;
+        height: 40px;
+    }
+    .operandos {
+        padding-top: 30px;
+        column-gap: 0;
+        row-gap: .8em;
+    }
+}
+@media only screen and (max-width: 540px) {
+    .container-calculator { 
+        height: 80vh;
+    }
+    .buttons {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media only screen and (max-width: 414px) {
+    .principal { 
+        background-size: 500px;
+        background-position-y: 50%;
+        background-position-x: 10%;
+    }
+    .container-calculator {
+        width: 90vw;
+        height: 60vh;
+    }
+    .buttons {
+        width: 50px;
+        height: 50px;
+    }
+    .operandos {
+        padding-top: 40px;
+        column-gap: .9em;
+        row-gap: .7em;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .container-calculator {
+        width: 90vw;
+        height: 80vh;
+    }
+    .operandos {
+        column-gap: .5em;
+        row-gap: .7em;
+    }
+}
+@media only screen and (width: 390px) {
+    .container-calculator {
+        width: 93vw;
+        max-width: 95vw;
+        height: 65vh;
+    }
+    .operandos {
+        row-gap: .7em;
+    }
+}
+
+@media only screen and (max-width: 280px) {
+    .principal { 
+        background-size: 400px;
+        background-position-y: 50%;
+        background-position-x: 5%;
+    }
+    .container-calculator { 
+        width: 90vw;
+        height: 70vh;
+        
+    }
+    .buttons {
+        width: 30px;
+        height: 30px;
+        font-size: 1rem;
+    }
+    .operandos {
+        column-gap: .5em;
+        row-gap: .7em;
+    }
+}
