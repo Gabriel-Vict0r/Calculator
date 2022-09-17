@@ -5,11 +5,15 @@
     font-family: 'roboto', sans-serif;
     font-size: 1.1em;
 }
+
+/*Root colors from project*/
 :root {
     --color-background-calculator: #323232;
     --color-standard-white: #F8F8F8;
     --color-secondary: #74EBD5;
 }
+
+/*General Style*/
 body {
     background-color: var(--color-standard-white);
 }
@@ -30,31 +34,50 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    margin-bottom: 4px;
-    height: 90px;
+    height: 115px;
     text-align: right;
     color: var(--color-standard-white);
     font-size: 1.7rem;
+    position: relative;
 }
-.results span { 
+.results span {
     cursor: default;
+    position: absolute;
+    top: 40px;
 }
-.resultado {
+.resultado, .show-calcs-maked{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: end;
 }
 
 .results p {
     justify-content: baseline;
     text-align: right;
+    max-width: 93%;
+}
+
+.numbers { 
+    word-break: break-all;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.Calcs {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .principal .container-calculator {
     width: 30%;
     max-width: 50%;
     background-color: var(--color-background-calculator);
-    height: 80%;
+    height: 90%;
     max-height: 550px;
     padding-top: 30px;
     padding-right: 30px;
@@ -81,7 +104,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    /* color: var(--color-background-calculator); */
+    
     text-align: center;
     margin: 0 auto;
     width: 55px;
@@ -90,21 +113,32 @@ body {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+
+    animation: 2s ease-in-out;
 }
-.buttons:hover {
-    opacity: .9;
+#buttonCalc {
+    grid-row-start: 4;
+    grid-row-end: 6;
+    grid-column-end: 5;
+    background: #74EBD5;
+    height: auto;
+    border-radius: 50px;
+}
+.show-calc { 
+    white-space: nowrap;
 }
 .buttons:active { 
+    opacity: .9;
     border: 1px black solid;
     border-radius: 30px;
+    transform: scale(0.9);
 }
 .operandos .unusual {
     background-image: url(../images/Ellipse-bg_especial.svg);
 
 }
-/* .buttonCalc { 
-    height: 100px;
-} */
+
+/*Media queries / screen adaptation*/
 @media only screen and (width: 1280px) {
     .container-calculator { 
         height: 80vh;

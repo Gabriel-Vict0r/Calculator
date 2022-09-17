@@ -1,56 +1,89 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculadora</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
-    <link rel="manifest" href="./images/site.webmanifest">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./images/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./images/site.webmanifest" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
     <script src="script.js" defer></script>
-</head>
-<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="../jquery-textfill/dist/jquery.textfill.min.js"></script>
+  </head>
+  <body>
     <main class="principal">
-        <div class="container-calculator">
-            <div class="results">
-                <p class="Calcs"></p>
-                <div class="resultado">
-                    <span class="show-calc">&#61;</span>
-                    <p class="numbers"> </p>
-                </div>
-            </div>
-            <div class="operandos">
-            <button class="buttons unusual" onclick="clean()">C</button>
-            <button class="buttons unusual" onclick="insert('/')">&divide;</button>
-            <button class="buttons unusual" onclick="insert('%')">&#37;</button>
-            <button class="buttons unusual" onclick="insert('x')">&times;</button>
-            <button class="buttons" onclick="insert('7')">7</button>
-            <button class="buttons" onclick="insert('8')">8</button>
-            <button class="buttons" onclick="insert('9')">9</button>
-            <button class="buttons unusual" onclick= "insertMinus()">&plusmn;</button>
-            <button class="buttons" onclick="insert('4')">4</button>
-            <button class="buttons" onclick="insert('5')">5</button>
-            <button class="buttons " onclick="insert('6')">6</button>
-            <button class="buttons unusual " onclick="insert('-')">&minus;</button>
-            <button class="buttons" onclick="insert('1')">1</button>
-            <button class="buttons" onclick="insert('2')">2</button>
-            <button class="buttons" onclick="insert('3')">3</button>
-            <button class="buttons unusual" onclick="insert('+')">&#43;</button>
-            <button class="buttons dott" onclick="insert('.')">.</button>
-            <button class="buttons" onclick="insert('0')">0</button>
-            <button class="buttons unusual arrow-left" onclick="deleteNum()"><span class="material-symbols-outlined">
-                arrow_back
-                </span></button>
-            <button class="buttons unusual" id="buttonCalc" onclick="calc()">&#61;</button>
+      <div class="container-calculator">
+        <div class="results" id="mostrarResultado">
+          <div class="show-calcs-maked">
+            <p class="Calcs"></p>
+          </div>
+          <span class="show-calc">&#61;</span>
+          <div class="resultado">
+            <p class="numbers"></p>
+          </div>
         </div>
+        <div class="operandos">
+          <button class="buttons unusual" onclick="clean()">C</button>
+          <button class="buttons unusual" onclick="insert('/')">
+            &divide;
+          </button>
+          <button class="buttons unusual" onclick="insert('x')">&times;</button>
+          <button class="buttons unusual" onclick="insert('-')">&minus;</button>
+          <button class="buttons" onclick="insert('7')">7</button>
+          <button class="buttons" onclick="insert('8')">8</button>
+          <button class="buttons" onclick="insert('9')">9</button>
+          <button class="buttons unusual" onclick="insert('+')">&#43;</button>
+          <button class="buttons" onclick="insert('4')">4</button>
+          <button class="buttons" onclick="insert('5')">5</button>
+          <button class="buttons" onclick="insert('6')">6</button>
+          <button class="buttons unusual" id="buttonCalc" onclick="calc()">
+            &#61;
+          </button>
+          <button class="buttons unusual" onclick= "insertMinus()">&plusmn;</button>
+          <button class="buttons" onclick="insert('1')">1</button>
+          <button class="buttons" onclick="insert('2')">2</button>
+          <button class="buttons" onclick="insert('3')">3</button>
+          <button class="buttons dott" onclick="insert('.')">.</button>
+          <button class="buttons" onclick="insert('0')">0</button>
+          <button class="buttons unusual arrow-left" onclick="deleteNum()">
+          <span class="material-symbols-outlined"> arrow_back </span>
+          </button>
         </div>
+      </div>
     </main>
-</body>
+  </body>
 </html>
